@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #cc0000;
+    --secondary-color: #7c0000;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.app-header {
+    background: var(--primary-color);
+}
+
+.app-header .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+}
+
+.app-header img {
+    width: 170px;
+    margin-bottom: 15px;
+}
+
+.app-header input {
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    padding: 0 5px;
+    outline: none;
+    color: red;
+    font-family: 'times new roman', sans;
+    font-size: 18px;
+}
+
+.app-header input::placeholder {
+    color: red;
+}
+
+.app-header input:focus::placeholder {
+    color: white;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.grid .item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ccc;
+    padding: 10px;
+}
+
+.grid .item img {
+    width: 30px;
+    display: block;
+    align-self: flex-end;
+}
+
+.grid .item h4 {
+    font-family: arial;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.grid .item p {
+    margin-bottom: 20px;
+}
+
+.app-footer {
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: arial, sans-serif;
+    background-color: #ccc;
+}
+
+.app-footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.app-footer ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subheader {
+    background-color: var(--secondary-color);
+    width: 90%;
+    margin: 0 auto 16px auto;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subheader i {
+    vertical-align: text-bottom;
+}
+
+.subheader p {
+    font-family: arial;
+    font-weight: bold;
+}
+
+.subheader img {
+    width: 40px;
+}
+
+@media (min-width: 768px) {
+    .app-header img {
+        width: 260px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid .item img {
+        width: 60px;
+    }
+}
